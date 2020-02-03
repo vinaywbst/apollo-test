@@ -13,8 +13,6 @@ import { ApolloProvider } from "@apollo/react-hooks";
 
 
 
-
-
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -23,7 +21,7 @@ class App extends React.Component {
 createApolloClient = authToken => {
   return new ApolloClient({
     link: new WebSocketLink({
-      uri: "ws://gambilife.com/graphql",
+      uri: "wss://gambilife.com/graphql",
       options: {
         reconnect: true,
       }
