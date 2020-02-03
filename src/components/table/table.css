@@ -1,0 +1,101 @@
+table {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: inherit;
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+}
+  
+  table tr {
+    background: #133252;
+    color: #fff;
+}
+  
+
+
+table thead tr th {
+    background: #275789;
+    color: #7D9CC6;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: left;
+    padding: 10px 20px;
+    font-weight: 300;
+}
+
+table thead tr {
+    border: none;
+}
+
+table tr td {
+    font-size: 13px;
+    line-height: 15px;
+    padding: 12px 20px;
+    font-weight: 400;
+}
+
+.bold-text{
+    font-weight: 900;
+}
+
+.green{
+    color: #73FC7F;
+}
+
+
+.red{
+    color: #FD7979;
+}
+
+
+table tr td span {
+    background: #FEC41C;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    font-size: 10px;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 12px;
+    font-weight: 300;
+    color: #000;
+}
+
+table tr td.green span {
+    color: #000;
+}
+
+table tbody tr:last-child{
+position: relative;
+  -webkit-animation-name: example;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-direction: alternate;
+
+  animation-name: example;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-direction: alternate;
+
+}
+
+
+
+  @-webkit-keyframes example {
+    0%   {background-color:#1e446b;}
+  
+    100% {background-color:#1e446b; }
+  }
+  
+
+  @keyframes example {
+      0%   {background-color:#1e446b; }
+  
+    100% {background-color:#1e446b; }
+  }

@@ -1,0 +1,59 @@
+.input-inner {
+    display: flex;
+    position: relative;
+    margin-top: 30px;
+}
+
+.input-inner input {
+    padding:20px 10px 10px 25px;
+    background: #0A1A33;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.input-inner input::placeholder {
+    color: #fff;
+    font-size: 14px;
+}
+
+.input-inner  input::-webkit-outer-spin-button,
+.input-inner  input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.input-inner label {
+    display: block;
+    position: absolute;
+    color: #80A2CC;
+    font-size: 10px;
+    left: 10px;
+    top: 5px;
+}
+
+.input-inner button {
+    background: #275E9A;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 15px;
+    border-left: 1px solid #3c5173;
+}
+
+.input-inner label:before {
+    content: "₿";
+    position: absolute;
+    display: block;
+    background: #fec41c;
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    font-size: 10px;
+    color: #000;
+    text-align: center;
+    bottom: -15px;
+}

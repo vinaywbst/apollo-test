@@ -1,0 +1,27 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 99;
+
+}
+
+
+.header {
+    background-color: #5DA5ED;
+    padding: 5px 10px;
+    text-align: right;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header span {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 100%;
+    display: block;
+    float: right;
+}

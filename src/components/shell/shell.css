@@ -1,0 +1,33 @@
+.shell-box {
+    text-align: center;
+    width: 274px;
+    height: 208px;
+    position: relative;
+    margin: 0px auto;
+    cursor: pointer;
+}
+
+
+
+.top-shell {
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    z-index: 9;
+    transition: all 1s;
+    transition-timing-function: ease-out;
+}
+
+.bottom-shell {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    transition: all 1s;
+    transition-timing-function: ease-out;
+}
+
+.shell-box:hover .top-shell {
+    transform: translate(-100px, -50px);
+}
