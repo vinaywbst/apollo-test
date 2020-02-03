@@ -25,7 +25,7 @@ const createApolloClient = authToken => {
 };
 
 
-const App =()=> {
+function App () {
 const [show, setShow] = useState(false)
   const handlePopup = (e) =>{
       if(e === 'open'){
