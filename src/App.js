@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import './App.css';
 import Header from './components/header/header';
 import Table from './components/table/table';
@@ -25,8 +25,9 @@ const createApolloClient = authToken => {
 };
 
 
-function App () {
+function App() {
 const [show, setShow] = useState(false)
+useEffect(()=>{},[]);
   const handlePopup = (e) =>{
       if(e === 'open'){
         setShow(true)
