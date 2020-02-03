@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react';
+import React from 'react';
 import './App.css';
 import Header from './components/header/header';
 import Table from './components/table/table';
@@ -12,7 +12,15 @@ import { InMemoryCache } from "apollo-cache-inmemory";
 import { ApolloProvider } from "@apollo/react-hooks";
 
 
-const createApolloClient = authToken => {
+
+
+
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={show:false}
+  }
+createApolloClient = authToken => {
   return new ApolloClient({
     link: new WebSocketLink({
       uri: "ws://gambilife.com/graphql",
@@ -23,19 +31,15 @@ const createApolloClient = authToken => {
     cache: new InMemoryCache()
   });
 };
-
-
-function App() {
-const [show, setShow] = useState(false)
-useEffect(()=>{},[]);
-  const handlePopup = (e) =>{
+ handlePopup = (e) =>{
       if(e === 'open'){
-        setShow(true)
+        this.setState(true)
       }else if(e === 'close'){
-        setShow(false)
+        this.setState(false)
       }
   }
-  const client = createApolloClient();
+  render(){
+    const client = this.createApolloClient();
   return (
     <ApolloProvider client={client}>
     <div className="App">
@@ -51,17 +55,17 @@ useEffect(()=>{},[]);
                 <Table />
             </div>
             <div className="box-right">
-             <Shell  handlePopup= {handlePopup}/>
+             <Shell  handlePopup= {this.handlePopup}/>
             </div>
           </div>
       </div>   
       </div>   
-      {show && <Popup handlePopup= {handlePopup}/>}
+      {this.state.show && <Popup handlePopup= {this.handlePopup}/>}
     
 
     </div>
     </ApolloProvider>
-  );
+  );}
 }
 
 export default App;
